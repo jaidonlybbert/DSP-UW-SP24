@@ -1,0 +1,99 @@
+Yan lecunn
+Les Atlas
+- Background in machine learning in the 80's 
+- PhD was in cochlear implants
+- First prototype will put in museam
+- gave up on convolutional networks in 90's 
+- Active learning, first author David Cohn
+	- Couldn't find job in academics
+	- Worked on AdSense at Google, cohn-atlas algorithm
+
+Class Webpage (Canvas)
+- Signal Processing: Deep and Classical Methods
+- Got in trouble from complaint, told to stop teaching DSP (in ~80/90s)
+	- Got Fisheries department on his side to keep teaching
+- A lot of folklore about FFT and ML
+- FFT does not compute Discrete-time Fourier Transform
+- Sieg Hall Sundays - south side door, knock on window if locked - office hours
+- CNN seem to learn complex exponential eigenfunctions
+	- No accident
+- Homework due Tuesdays 8pm
+- Two lecture note sets
+	- One before, one "after" - including answers to discussion questions
+- Midterm exam: 6-9pm April 30th
+- Final exam: 6-9pm June 4th
+- Deaf, bone growth
+	- Several hearing aids
+	- Speech hearing did not go up
+	- Some theories, may have a related project later in the q
+
+- Oversampling
+	- Reduce costs
+	- Most data is noise overreprents garbage
+	- solved issues with ML for cough classification from 70-90% by downsampling
+		- cell phone oversampling issues
+- PHase response
+	- when hearing is reduced, phase perception goes up (for some people)
+	- phase correction due to multipath in mmwave increases datarate
+- Loran C 
+	- GPS before GPS
+	- Transmitters along  coast
+	- boat & plane location
+	- Recievers had temperature controlled internal analog filter
+		- $25k cost
+		- same cost moved to optimal L-infinity approx for FIR filter
+		- L-infinity norm (instead of L2 [squared error])
+		- Building cost ~$1.2k - sold for same $25k cost
+- Speed up convolution with FFT
+	- Fast convolution
+- Bernard Widrow
+	- https://proceedings.neurips.cc/paper_files/paper/1989/file/63923f49e5241343aa7acb6a06a751e7-Paper.pdf
+
+Goals
+	- classical signal processing
+	- motivate define some deep learning techniques
+	- lot of folklore about DSP
+		- FFT provides a DTFT (untrue)
+			- DTFT is a mathematical operation with infinite output
+			- sometimes big difference FFT gives DFT
+		- Good to sample 2 times the bandwidth of a signal 
+			- only if you want really expensive solution
+		- FFT requires that the lenght of the transformed sequence be a power of 2
+			- Not correct, size N is not any positive integer
+			- Has to be a composite number N = N1 * N2 * ... * NK where
+				all are integers
+			- Cooley-Tukey algorithm
+			- Talked to Tukey at work @ SRI international, first thing Tukey said
+				above point
+	- Recent paper by Atlas
+		- Complex Clipping for Improved generalizations in Machine Learning
+		- Nonlinear modification of complex numbers to make CNN generalize better
+- Worked in Military sonar, radar, battlefield acoustic
+- Seismic data, SETI, subatomic physics
+- Medical ultrasount and CT scans, genomics, and proteomics informatics
+- Subarachnoid hemorrhage, 2006
+	- months-long recovery
+- Worked on MPEG 1 layer 3 (MP3) (audio coding)
+- Worked on Homma, Atlas, and Marks, "An Artificial Neural Network for Spatio-Tempeoral Bipolar Patterns: Application to Phoneme Classification" NIPS 1987
+- Cohn, Atlas, Ladner "improving generalization with Active Learning" Machine Learning
+
+- Why 44.1kHz sample rate
+	- 2x 20kHz threshold for human hearing
+	- not the actual reason
+	- video recorders were used for first digital audio, systems were 60Hz NTSC or 50 Hz PAL system
+	- in 60 Hz video there are 35 blanked lines, leaving 490 lines per frame or 245 lines per field, so the sampling rate is given by: 60 x 245 x 3 = 44.1kHz
+	- became part of philllips/sony redbook standard
+	- first consumer compact disc player was Sony CDP-101 40 years ago cost $1k
+	- 96dB SNR
+- Properties of discrete time systems
+- Linearity
+	- Superposition
+		- T{aTx1[n] + bx2[n]} = ay1[n] + by2[n] where y1[n] = T{x1[n]}
+	- Time invariance or shift invariance
+		- shifting input produces output that is equivalently shifted
+	- Causality
+		- system does not respond until after the input starts
+	- Bounded Input/Bounded Output (BIBO)
+- Convolution most common LTI system
+	- flip simpler of two functions
+	- draw and make use of figures
