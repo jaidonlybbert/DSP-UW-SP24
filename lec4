@@ -1,0 +1,16 @@
+April 16, 2023
+
+Read sections 4.5-4.8
+
+Midterm April 30th (2 weeks)
+- Practice midterm available
+
+Multi-rate signal processing
+- Downsampling or decimation by factor of M
+	- Discard M-1 out of M samples
+	- Sampling period Td = MT
+
+- Upsampling by factor of L 
+	- With no other information we can insert L-1 samples
+	  each with the value of zero
+	
